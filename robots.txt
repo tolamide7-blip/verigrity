@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /embed-widget.html
+Sitemap: https://verigrity.com/sitemap.xml

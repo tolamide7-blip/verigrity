@@ -1,0 +1,18 @@
+{
+  "name": "Verigrity \u2014 Truth with Integrity",
+  "short_name": "Verigrity",
+  "description": "Free website trust-signal checker.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#0f4c81",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
