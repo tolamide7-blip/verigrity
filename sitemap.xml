@@ -1,71 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://verigrity.com/</loc></url>
-<url><loc>https://verigrity.com/blog.html</loc></url>
-<url><loc>https://verigrity.com/tools.html</loc></url>
-<url><loc>https://verigrity.com/about.html</loc></url>
-<url><loc>https://verigrity.com/author.html</loc></url>
-<url><loc>https://verigrity.com/methodology.html</loc></url>
-<url><loc>https://verigrity.com/contact.html</loc></url>
-<url><loc>https://verigrity.com/privacy.html</loc></url>
-<url><loc>https://verigrity.com/terms.html</loc></url>
-<url><loc>https://verigrity.com/disclosure.html</loc></url>
-<url><loc>https://verigrity.com/cookies.html</loc></url>
-<url><loc>https://verigrity.com/embed.html</loc></url>
-<url><loc>https://verigrity.com/embed-widget.html</loc></url>
-<url><loc>https://verigrity.com/source-verifier.html</loc></url>
-<url><loc>https://verigrity.com/ai-fact-check.html</loc></url>
-<url><loc>https://verigrity.com/image-truth.html</loc></url>
-<url><loc>https://verigrity.com/document-integrity.html</loc></url>
-<url><loc>https://verigrity.com/email-spoof-checker.html</loc></url>
-<url><loc>https://verigrity.com/blog/a-record-vs-aaaa.html</loc></url>
-<url><loc>https://verigrity.com/blog/automated-security-scanners.html</loc></url>
-<url><loc>https://verigrity.com/blog/browser-security-warnings.html</loc></url>
-<url><loc>https://verigrity.com/blog/certificate-warning.html</loc></url>
-<url><loc>https://verigrity.com/blog/content-security-policy-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/dns-records-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/does-https-mean-safe.html</loc></url>
-<url><loc>https://verigrity.com/blog/domain-age-myths.html</loc></url>
-<url><loc>https://verigrity.com/blog/download-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/free-trial-checklist.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-check-a-website-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-check-domain-name.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-check-if-a-website-is-legit.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-check-ssl-certificate.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-read-url.html</loc></url>
-<url><loc>https://verigrity.com/blog/how-to-spot-a-fake-website.html</loc></url>
-<url><loc>https://verigrity.com/blog/is-this-website-legit.html</loc></url>
-<url><loc>https://verigrity.com/blog/mx-records-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/nameservers-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/online-shopping-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/payment-page-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/permissions-policy-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/privacy-policy-check.html</loc></url>
-<url><loc>https://verigrity.com/blog/punycode-domain-names.html</loc></url>
-<url><loc>https://verigrity.com/blog/qr-code-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/redirects-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/referrer-policy-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/refund-policy-check.html</loc></url>
-<url><loc>https://verigrity.com/blog/robots-txt-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/search-console-indexing.html</loc></url>
-<url><loc>https://verigrity.com/blog/server-response-codes.html</loc></url>
-<url><loc>https://verigrity.com/blog/sitemap-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/social-media-links.html</loc></url>
-<url><loc>https://verigrity.com/blog/ssl-vs-tls.html</loc></url>
-<url><loc>https://verigrity.com/blog/subdomain-vs-domain.html</loc></url>
-<url><loc>https://verigrity.com/blog/subscription-traps.html</loc></url>
-<url><loc>https://verigrity.com/blog/suspicious-email-link.html</loc></url>
-<url><loc>https://verigrity.com/blog/suspicious-url-signs.html</loc></url>
-<url><loc>https://verigrity.com/blog/terms-of-service-check.html</loc></url>
-<url><loc>https://verigrity.com/blog/trust-score-explained.html</loc></url>
-<url><loc>https://verigrity.com/blog/url-shorteners-safety.html</loc></url>
-<url><loc>https://verigrity.com/blog/verify-business-online.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-accessibility-basics.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-contact-page.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-malware-check.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-reputation-check.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-security-headers.html</loc></url>
-<url><loc>https://verigrity.com/blog/website-trust-checklist.html</loc></url>
-<url><loc>https://verigrity.com/blog/what-is-hsts.html</loc></url>
-<url><loc>https://verigrity.com/blog/what-is-https.html</loc></url>
+  <url><loc>https://verigrity.com/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://verigrity.com/tools.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/blog.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://verigrity.com/source-verifier.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/ai-fact-check.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/image-truth.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/document-integrity.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/email-spoof-checker.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://verigrity.com/methodology.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/author.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/contact.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://verigrity.com/privacy.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://verigrity.com/terms.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://verigrity.com/disclosure.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://verigrity.com/cookies.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/a-record-vs-aaaa.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/automated-security-scanners.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/browser-security-warnings.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/certificate-warning.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/content-security-policy-explained.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/dns-records-explained.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/does-https-mean-safe.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/domain-age-myths.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/download-safety.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/free-trial-checklist.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-check-a-website-safety.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-check-domain-name.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-check-if-a-website-is-legit.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-check-ssl-certificate.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-read-url.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/how-to-spot-a-fake-website.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/is-this-website-legit.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/mx-records-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/nameservers-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/online-shopping-safety.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/payment-page-safety.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/permissions-policy-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/privacy-policy-check.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/punycode-domain-names.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/qr-code-safety.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/redirects-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/referrer-policy-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/refund-policy-check.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/robots-txt-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/search-console-indexing.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/server-response-codes.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/sitemap-explained.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/social-media-links.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/ssl-vs-tls.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/subdomain-vs-domain.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/subscription-traps.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/suspicious-email-link.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/suspicious-url-signs.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/terms-of-service-check.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/trust-score-explained.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/url-shorteners-safety.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/verify-business-online.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-accessibility-basics.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-contact-page.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-malware-check.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-reputation-check.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-security-headers.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/website-trust-checklist.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/what-is-hsts.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://verigrity.com/blog/what-is-https.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 </urlset>
