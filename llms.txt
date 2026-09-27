@@ -1,0 +1,36 @@
+# Verigrity
+
+> Verigrity is a free website trust checker that helps you review basic security, privacy, transparency, and website-quality signals before you interact with a site. Truth with Integrity.
+
+## What Verigrity Does
+Verigrity provides a free Verigrity Score (0-100) that summarizes observable website trust signals. It checks HTTPS, privacy information, contact information, domain signals, and website quality. No signup, no paywall.
+
+## Core Tools
+- [Trust Checker](https://verigrity.com/#checker-tool): Free website URL trust checker - Get score in ~5 seconds
+- [Source Verifier](https://verigrity.com/source-verifier.html): Inspect source evidence
+- [AI Fact Check](https://verigrity.com/ai-fact-check.html): Research claims transparently
+- [Image Truth](https://verigrity.com/image-truth.html): Inspect image evidence
+- [Document Integrity](https://verigrity.com/document-integrity.html): Inspect files and hashes
+- [Email Spoof Checker](https://verigrity.com/email-spoof-checker.html): Inspect email authentication
+
+## Key Pages
+- [Methodology](https://verigrity.com/methodology.html): How Verigrity Score is calculated
+- [About](https://verigrity.com/about.html): About Verigrity - Truth with Integrity
+- [Blog](https://verigrity.com/blog.html): 50+ guides on website verification
+- [Tools](https://verigrity.com/tools.html): All verification tools
+
+## Popular Guides
+- [Website Trust Checklist: 15 Things to Check Before You Buy](https://verigrity.com/blog/website-trust-checklist.html)
+- [How to Check Whether a Website Looks Trustworthy](https://verigrity.com/blog/how-to-check-if-a-website-is-legit.html)
+- [How to Spot a Fake Website](https://verigrity.com/blog/how-to-spot-a-fake-website.html)
+- [What HTTPS Does — and What It Does Not Do](https://verigrity.com/blog/what-is-https.html)
+- [How to Inspect a Suspicious Link Before Opening It](https://verigrity.com/blog/suspicious-email-link.html)
+- [QR Code Safety](https://verigrity.com/blog/qr-code-safety.html)
+
+## What Verigrity Is NOT
+Verigrity does not guarantee that a website is safe, legitimate, fraudulent, or secure. A score is an informational summary of observable signals. Users should independently verify businesses, identities, payment details, and important claims.
+
+## Contact
+- Website: https://verigrity.com
+- Contact: https://verigrity.com/contact.html
+- Trust Philosophy: Truth with Integrity
