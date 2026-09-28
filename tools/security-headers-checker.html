@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Security Headers Checker — Free HTTP Header Test</title>
-<meta name="description" content="Review HTTP security headers like HSTS, CSP and X-Frame-Options on any website. Free tool.">
+<title>Security Headers Checker — Free HTTP Header Test | Verigrity</title>
+<meta name="description" content="Check HTTP security headers on any website: HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy. Understand what each header does and why it matters. Free, no signup.">
 <link rel="canonical" href="https://verigrity.com/tools/security-headers-checker.html">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="../logo.svg" type="image/svg+xml">
@@ -63,6 +63,58 @@
     <li>Referrer-Policy</li>
     <li>Permissions-Policy</li>
   </ul>
+
+  <h2>What HTTP security headers do</h2>
+  <p>When your browser requests a web page, the server responds with the page content plus a set of HTTP response headers. Some of those headers tell the browser how to handle the content safely. These are called security headers.</p>
+  <p>Security headers are instructions, not enforcement. They don't make a site secure by themselves, but they define how the browser should behave in specific situations — and having the right ones in place closes off entire classes of common attacks.</p>
+
+  <h2>The six headers this tool checks</h2>
+
+  <h3>Strict-Transport-Security (HSTS)</h3>
+  <p>HSTS tells the browser to only ever access this domain over HTTPS, even if a user types <code>http://</code> or clicks an old HTTP link. It prevents downgrade attacks and cookie hijacking on public Wi-Fi networks. A well-configured HSTS header includes <code>max-age=31536000</code> (one year) and, increasingly, the <code>preload</code> directive so that browsers know about it before the first visit.</p>
+
+  <h3>Content-Security-Policy (CSP)</h3>
+  <p>CSP restricts which sources the browser is allowed to load scripts, styles, images, fonts, and frames from. A strong CSP blocks most cross-site scripting (XSS) attacks, which are among the most common web vulnerabilities. CSP is the most complex of the six headers — a misconfigured one can break legitimate site functionality, so sites often start in "report-only" mode before enforcing.</p>
+
+  <h3>X-Content-Type-Options</h3>
+  <p>This header prevents the browser from "sniffing" a file's type and executing it as something else. Should almost always be set to <code>nosniff</code>. Without it, a file that a site intended as a harmless text file could be interpreted as a script if the browser guesses wrong.</p>
+
+  <h3>X-Frame-Options</h3>
+  <p>Controls whether the page can be embedded in an <code>&lt;iframe&gt;</code> on another site. Prevents clickjacking — the technique where an attacker overlays invisible buttons to trick users into clicking things they didn't intend (like confirming a bank transfer). Common values: <code>DENY</code> (never allow framing) or <code>SAMEORIGIN</code> (allow framing only from the same domain).</p>
+
+  <h3>Referrer-Policy</h3>
+  <p>Controls how much referrer information the browser sends when a user clicks a link away from the page. This protects privacy and prevents leaking sensitive URLs (e.g., a password-reset URL that contains a token) to third parties. Common values: <code>strict-origin-when-cross-origin</code> (a good modern default) or <code>no-referrer</code> (send nothing).</p>
+
+  <h3>Permissions-Policy</h3>
+  <p>Limits which browser features the page (and any embedded third-party scripts) can request — camera, microphone, geolocation, payment APIs, and so on. Setting <code>Permissions-Policy: camera=(), microphone=(), geolocation=()</code> on a page that doesn't need those features removes an entire class of potential abuse.</p>
+
+  <h2>What missing headers actually mean</h2>
+  <p>Missing headers do not mean a site is malicious. In practice, missing headers usually mean one of:</p>
+  <ul>
+    <li>The site was built before these headers became standard practice</li>
+    <li>The hosting stack or CMS doesn't set them by default</li>
+    <li>The site is on an older platform where adding them requires manual configuration</li>
+    <li>The site owner isn't aware of them</li>
+  </ul>
+  <p>Conversely, having all six headers does not prove a site is safe. A phishing site can be well-configured — headers only describe the browser's behavior, not the intent of the operator.</p>
+
+  <h2>Reading the results</h2>
+  <dl>
+    <dt><strong>Detected</strong> (green)</dt>
+    <dd>The server sends that header in its response. The header is present and the browser will honor it.</dd>
+    <dt><strong>Not detected</strong> (amber)</dt>
+    <dd>The server does not send that header, or sends it only on certain pages (many sites set different headers on different routes).</dd>
+  </dl>
+  <p>A site with 5 or 6 detected is usually one that cares about security posture — often a modern SaaS platform, an established business, or an infrastructure provider. A site with 0 detected is not automatically untrustworthy; it may simply be an older site, a small static site, or a site that relies on other protections.</p>
+
+  <h2>Why this is a trust signal, not a verdict</h2>
+  <p>Security headers are one observable signal among many. Used alone, they can mislead in both directions. Use them as:</p>
+  <ul>
+    <li>A positive signal when they're present and well-configured</li>
+    <li>A weak negative signal when they're absent and the site handles sensitive data</li>
+    <li>Never a reason to trust or distrust a site on their own</li>
+  </ul>
+  <p>Combine this check with what you see on the site itself — content quality, contact details, policy pages, and independent reputation — before making a decision.</p>
 
   <h2>Limitations</h2>
   <p>This tool reports observable signals only. It is not a security audit, a business verification, or proof of fraud. Always verify independently.</p>
