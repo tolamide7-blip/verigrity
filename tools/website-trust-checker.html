@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Trust Checker — Free Verigrity Score</title>
-<meta name="description" content="Check any website's visible trust signals with a free Verigrity Trust Score. HTTPS, privacy, contact and domain signals.">
+<title>Website Trust Checker — Free Verigrity Trust Score | Verigrity</title>
+<meta name="description" content="Check any website's visible trust signals with a free Verigrity Trust Score. HTTPS, TLS, security headers, DNS, privacy, terms and contact signals — with a clear explanation of what the score means and what it does not.">
 <link rel="canonical" href="https://verigrity.com/tools/website-trust-checker.html">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="../logo.svg" type="image/svg+xml">
@@ -62,6 +62,66 @@
     <li>Presence of privacy, terms and contact pages</li>
     <li>DNS A and MX records</li>
   </ul>
+
+  <h2>What a Verigrity Trust Score is</h2>
+  <p>The Verigrity Trust Score is a 0–100 summary of observable signals collected from a website when you submit a URL. It is not a certification, and it is not a guarantee. It is a starting point — a way to slow down and look at what a site actually shows you before deciding whether to buy, register, or share information with it.</p>
+  <p>The score combines technical signals (HTTPS, TLS certificate, security headers, DNS records, redirect behavior) with transparency signals (whether the site publishes a privacy policy, terms, and contact details). Sites that check more boxes score higher.</p>
+
+  <h2>What goes into the score</h2>
+  <p>Each scan starts with a base of 35 points and adds or removes points based on what the site actually shows:</p>
+  <ul>
+    <li><strong>HTTPS protocol</strong> — adds 20 points. A site that doesn't use HTTPS leaves the connection between you and the server open to inspection on shared networks.</li>
+    <li><strong>Server responds with a 2xx or 3xx status</strong> — adds 8 points. A site that returns errors or blocks automated requests is harder to assess.</li>
+    <li><strong>Two or fewer redirects</strong> — adds 5 points. More than four redirects subtracts 8. Long redirect chains can hide the true destination of a link.</li>
+    <li><strong>Security headers</strong> — up to 15 points, at 3 points each. These headers tell the browser how to protect visitors. Missing them isn't malicious, but their presence indicates care.</li>
+    <li><strong>Privacy policy signal</strong> — adds 3 points if the site mentions or links to a privacy policy.</li>
+    <li><strong>Terms signal</strong> — adds 2 points.</li>
+    <li><strong>Contact signal</strong> — adds 2 points.</li>
+    <li><strong>Page title missing</strong> — subtracts 3 points. Pages with no title are often unfinished or templated.</li>
+    <li><strong>Punycode hostname (xn--)</strong> — subtracts 5 points. Punycode can be used for homograph attacks that mimic a legitimate domain visually.</li>
+  </ul>
+
+  <h2>What each signal means</h2>
+
+  <h3>HTTPS and TLS certificate</h3>
+  <p>HTTPS encrypts the traffic between your browser and the server. A valid TLS certificate confirms that the server controls the domain and that the connection is encrypted. It does not confirm that the site is honest or safe — scam sites routinely have valid certificates.</p>
+
+  <h3>HTTP response and redirects</h3>
+  <p>A site that responds with a normal 200 or 301/302 status is well-configured. Sites with many redirects, or that respond only to certain requests, can be harder to trust because the destination of a link isn't always obvious.</p>
+
+  <h3>Security headers</h3>
+  <p>Headers like HSTS, CSP, X-Frame-Options and others tell the browser how to protect visitors. A site with 4–6 of these headers in place is generally well-maintained. Zero headers may indicate a site that hasn't been updated in years, or that runs on a platform that doesn't set them by default.</p>
+
+  <h3>Privacy policy, terms, and contact</h3>
+  <p>Legitimate businesses usually publish a privacy policy, terms of service, and a real way to contact them. Their presence is a positive signal — but their absence is not proof of anything. Many small legitimate sites skip them, and many scam sites include them without meaning them.</p>
+
+  <h3>DNS records</h3>
+  <p>The domain's A records (IPv4 addresses), MX records (mail servers), and NS records (nameservers) reveal how a domain is set up. A domain with no MX records can't receive email — a red flag for a site claiming to be a business. A domain with consistent, reputable nameservers (Cloudflare, AWS, Google) is generally more established than one with unusual or changing DNS.</p>
+
+  <h3>Page title and content</h3>
+  <p>A page with a real title and substantive content signals a site that has been maintained. A page with no title or very little content may be an under-construction page, a placeholder, or a scam landing page.</p>
+
+  <h2>What a Verigrity Trust Score is not</h2>
+  <ul>
+    <li><strong>Not a security audit.</strong> The scan doesn't run malware detection, penetration testing, or CVE lookups.</li>
+    <li><strong>Not business verification.</strong> The score doesn't confirm that the business behind the site is registered, licensed, or real.</li>
+    <li><strong>Not fraud determination.</strong> A high score does not mean a site is honest; a low score does not mean it's a scam.</li>
+    <li><strong>Not a legal opinion.</strong> The score isn't a compliance statement, a GDPR assessment, or a consumer-protection determination.</li>
+  </ul>
+
+  <h2>How to use the score responsibly</h2>
+  <p>The score is most useful when you treat it as the first step of research, not the last. A responsible use looks like this:</p>
+  <ol>
+    <li><strong>Run the scan.</strong> Note which signals were present and which were missing.</li>
+    <li><strong>Look at the missing signals.</strong> A missing privacy policy on a site asking for personal data is worth attention. A missing MX record on a site claiming to be a business is worth attention.</li>
+    <li><strong>Read the site itself.</strong> Does the content look substantive? Are the policies readable? Is there a real contact method?</li>
+    <li><strong>Search independently.</strong> Look for the business name on independent sources. Search for the domain name alongside "scam" or "review." Check the business registration in the relevant jurisdiction.</li>
+    <li><strong>Verify payment details separately.</strong> Never wire money, enter card details, or share credentials based on a scan alone.</li>
+  </ol>
+
+  <h2>Why we don't guarantee anything</h2>
+  <p>Verigrity is a tool for helping people notice observable signals — not for making decisions on their behalf. Websites can be compromised, change their behavior, hide their true intent, or operate legally while still being dishonest. A single scan can't see any of that.</p>
+  <p>Every scan should be one input among many. If a score looks reassuring but something else about the site feels off, listen to that. If a score looks low but you have independent reason to trust the site, that independent evidence matters more.</p>
 
   <h2>Limitations</h2>
   <p>This tool reports observable signals only. It is not a security audit, a business verification, or proof of fraud. Always verify independently.</p>
