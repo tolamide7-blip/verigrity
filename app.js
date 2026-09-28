@@ -1,19 +1,49 @@
-// --- VERIGRITY GOOGLE ANALYTICS - G-NJRW4ZRBDK ---
-// Loads Google Analytics 4 on every page
+// --- VERIGRITY COOKIE CONSENT + ANALYTICS (consent-gated) ---
+// Handles the cookie banner and loads Google Analytics ONLY after Accept.
 (function() {
-  var gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NJRW4ZRBDK';
-  document.head.appendChild(gtagScript);
- 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag;
-  gtag('js', new Date());
-  gtag('config', 'G-NJRW4ZRBDK');
+  var KEY = 'verigrity_cookie_choice';
+
+  function loadGA() {
+    if (window.__verigrityGA_loaded) return;
+    window.__verigrityGA_loaded = true;
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NJRW4ZRBDK';
+    document.head.appendChild(gtagScript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-NJRW4ZRBDK');
+  }
+  window.__verigrityLoadGA = loadGA;
+
+  // Expose a global the inline cookie banner can call
+  window.cookieChoice = function(v){
+    try{ localStorage.setItem(KEY, v); }catch(e){}
+    var banner = document.getElementById('cookieBanner');
+    if(banner) banner.classList.remove('show');
+    if(v === 'accept') loadGA();
+  };
+
+  // On load: show banner if no choice, or load GA if previously accepted
+  function init(){
+    var choice = null;
+    try{ choice = localStorage.getItem(KEY); }catch(e){}
+    if(choice === 'accept'){ loadGA(); return; }
+    if(choice === 'reject'){ return; }
+    var banner = document.getElementById('cookieBanner');
+    if(banner) banner.classList.add('show');
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
-// --- END GOOGLE ANALYTICS ---
- 
+// --- END COOKIE CONSENT + ANALYTICS ---
+
 const form=document.getElementById("checkForm");
 const results=document.getElementById("results");
 const resultActions=document.getElementById("result-actions");
