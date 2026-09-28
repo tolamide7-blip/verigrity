@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) - G-NJRW4ZRBDK - Verigrity Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJRW4ZRBDK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NJRW4ZRBDK');
-</script>
-<!-- End Google tag -->
-
 <meta charset="UTF-8">
-<!-- Preconnect for GA4 - speeds up tag load -->
+<!-- Preconnect for GA4 - speeds up tag load after consent -->
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -267,7 +257,8 @@
 </div>
 </footer>
 <script src="app.js"></script>
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="cookies.html">Cookie details</a></div></div><script>function cookieChoice(v){try{localStorage.setItem('verigrity_cookie_choice',v)}catch(e){}document.getElementById('cookieBanner')?.classList.remove('show')}try{if(!localStorage.getItem('verigrity_cookie_choice'))document.getElementById('cookieBanner')?.classList.add('show')}catch(e){document.getElementById('cookieBanner')?.classList.add('show')}</script><script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="cookies.html">Cookie details</a></div></div>
+<script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker.register("/sw.js").catch(function () {});
