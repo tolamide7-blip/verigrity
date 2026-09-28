@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLS Certificate Checker — Free SSL Inspector</title>
+<meta name="description" content="Inspect a site's TLS/SSL certificate: issuer, validity dates, subject and chain. Free Verigrity tool.">
+<link rel="canonical" href="https://verigrity.com/tools/tls-certificate-checker.html">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"TLS Certificate Checker",
+  "url":"https://verigrity.com/tools/tls-certificate-checker.html",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="../index.html"><img src="../logo.svg" alt="" width="34" height="34"> Verigrity</a>
+    <nav>
+      <a href="../index.html#checker">Trust Checker</a>
+      <a href="../tools.html">Tools</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../methodology.html">Methodology</a>
+      <a href="../about.html">About</a>
+    </nav>
+    <a class="nav-cta" href="../index.html#checker">Check a Site</a>
+  </div>
+</header>
+
+<main>
+<section class="section">
+<div class="container article">
+  <p class="eyebrow">FREE TOOL</p>
+  <h1>TLS Certificate Checker</h1>
+  <p class="article-lead">Inspect any website's TLS/SSL certificate — issuer, subject, validity dates and whether the certificate is trusted.</p>
+
+  <div class="checker-box">
+    <form id="toolForm">
+      <label for="url">Website URL</label>
+      <div class="input-row">
+        <input id="url" type="text" placeholder="https://example.com" autocomplete="url" required>
+        <button class="button" type="submit">Run TLS Certificate Checker</button>
+      </div>
+    </form>
+    <div id="results" class="results hidden" aria-live="polite"></div>
+  </div>
+
+  <h2>What this tool checks</h2>
+  <ul>
+    <li>Certificate subject (CN)</li>
+    <li>Issuer</li>
+    <li>Valid from / valid to dates</li>
+    <li>Trust authorization status</li>
+  </ul>
+
+  <h2>Limitations</h2>
+  <p>This tool reports observable signals only. It is not a security audit, a business verification, or proof of fraud. Always verify independently.</p>
+
+  <p><a class="text-link" href="../tools.html">← Back to all Verigrity tools</a></p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+  <div><a class="logo" href="../index.html"><img src="../logo.svg" alt="" width="34" height="34"> Verigrity</a><p>Practical tools for checking online trust signals.</p></div>
+  <div><h4>Explore</h4><a href="../index.html#checker">Trust Checker</a><a href="../tools.html">Tools</a><a href="../blog.html">Blog</a><a href="../methodology.html">Methodology</a><a href="../about.html">About</a></div>
+  <div><h4>Policies</h4><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclosure.html">Disclosure</a><a href="../cookies.html">Cookie Notice</a></div>
+</div>
+<div class="container footer-bottom">© 2026 Verigrity. Information provided for educational purposes.</div>
+</footer>
+
+<script>
+const form = document.getElementById("toolForm");
+const results = document.getElementById("results");
+
+function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c])); }
+function row(label,value,cls=""){ return `<div class="result-item"><small>${esc(label)}</small><b class="${cls}">${esc(value)}</b></div>`; }
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = form.querySelector("button");
+  let raw = document.getElementById("url").value.trim();
+  if(!/^https?:\/\//i.test(raw)) raw = "https://" + raw;
+  let u;
+  try { u = new URL(raw); } catch { results.classList.remove("hidden"); results.innerHTML = `<p class="warning-text"><strong>Enter a valid URL.</strong></p>`; return; }
+
+  btn.disabled = true; btn.textContent = "Checking…";
+  results.classList.remove("hidden");
+  results.innerHTML = `<div class="loading"><strong>Running TLS Certificate Checker…</strong><p>Analyzing ${esc(u.hostname)}</p></div>`;
+
+  let html = "";
+  try {
+    const r = await fetch(`/api/trust?url=${encodeURIComponent(u.toString())}`);
+    if(!r.ok) throw new Error("API unavailable");
+    const data = await r.json();
+
+    const t = data.tls || {};
+    if (t.error) { html = `<p class="warning-text"><strong>${esc(t.error)}</strong></p>`; }
+    else {
+      const expires = t.validTo ? new Date(t.validTo) : null;
+      const daysLeft = expires ? Math.floor((expires - Date.now()) / 86400000) : null;
+      html = `
+        <div class="result-head">
+          <div><div class="result-url">${esc(data.url)}</div><small>TLS certificate report</small></div>
+        </div>
+        <div class="result-grid">
+          ${row("Subject (CN)", t.subject || "—")}
+          ${row("Issuer", t.issuer || "—")}
+          ${row("Valid from", t.validFrom || "—")}
+          ${row("Valid to", t.validTo || "—")}
+          ${row("Trusted", t.authorized ? "Yes" : "No", t.authorized ? "pass-text" : "warning-text")}
+          ${daysLeft !== null ? row("Days remaining", String(daysLeft), daysLeft > 30 ? "pass-text" : "warning-text") : ""}
+        </div>
+        <div class="disclosure-box"><strong>Note:</strong> A valid certificate does not prove the site is legitimate.</div>`;
+    }
+  } catch (err) {
+    html = `<p class="warning-text"><strong>Check unavailable.</strong> Try again later.</p>`;
+  }
+  results.innerHTML = html;
+  btn.disabled = false; btn.textContent = "Run TLS Certificate Checker";
+});
+</script>
+</body>
+</html>
