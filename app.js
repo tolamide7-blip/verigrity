@@ -19,6 +19,7 @@ const results=document.getElementById("results");
 const resultActions=document.getElementById("result-actions");
 const shareScore=document.getElementById("shareScore");
 const pinChecklist=document.getElementById("pinChecklist");
+let lastCheckedUrl="";
  
 function normalizeUrl(value){
   value=value.trim();
@@ -156,6 +157,7 @@ form?.addEventListener("submit",async e=>{
     results.classList.remove("hidden");
     results.innerHTML=`<p class="warning-text"><strong>Enter a valid website address.</strong></p>`;return;
   }
+  lastCheckedUrl=u.toString();
   results.classList.remove("hidden");
   if(resultActions) resultActions.classList.add("hidden");
   button.disabled=true;button.textContent="Analyzing…";
@@ -187,7 +189,7 @@ function buildScoreCardBlob(){
     const match=raw.match(/(\d{1,3})/);
     const score=match? Math.max(0,Math.min(100,Number(match[1]))) : null;
     const isUrlOnly = !!document.querySelector("#results .result-score.pattern-score");
-    const site=document.getElementById("url")?.value?.trim() || "Website";
+    const site=lastCheckedUrl || document.getElementById("url")?.value?.trim() || "Website";
     const canvas=document.createElement("canvas");
     canvas.width=1200; canvas.height=675;
     const ctx=canvas.getContext("2d");
@@ -227,7 +229,7 @@ async function shareScoreImage(){
 function currentShareData(){
   const scoreEl=document.querySelector("#results .result-score");
   const scoreText=scoreEl?.innerText?.replace(/\s+/g," ").trim() || "Verigrity Score";
-  const checkedUrl=document.getElementById("url")?.value?.trim() || "";
+  const checkedUrl=lastCheckedUrl || document.getElementById("url")?.value?.trim() || "";
   const page=window.location.href.split("#")[0];
   const text=`${scoreText} — checked with Verigrity. Truth with Integrity.`;
   return {title:"Verigrity Score",text,url:page,checkedUrl};
