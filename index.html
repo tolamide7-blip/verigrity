@@ -79,7 +79,7 @@
       "name": "How quickly can Verigrity return a score?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Verigrity is designed to return a result in about 5 seconds when the target website and network respond promptly. Actual response time can vary."
+        "text": "Verigrity generates the score locally in your browser in about 5 seconds when the target website and network respond promptly. The URL you enter is not sent to a Verigrity server for scoring. Actual response time can vary."
       }
     }
   ]
@@ -152,7 +152,8 @@
         <button class="button" type="submit">Get Trust Score</button>
       </div>
     </form>
-    <p class="micro score-speed">Designed for a Verigrity Score in about 5 seconds. Actual response time depends on the website, network, DNS, and hosting availability.</p>
+    <p class="micro score-speed">Designed for a Verigrity Score in about 5 seconds — generated locally in your browser. Actual response time depends on the website, network, DNS, and hosting availability.</p>
+    <p class="micro trust-badge" style="background:#eef6ff;border:1px solid #c2d9f0;padding:8px 12px;border-radius:6px;display:inline-block;">🔒 Private: This check runs in your browser — URLs are not sent to our servers. GA4 only tracks page views, not checked URLs.</p>
     <div class="static-result" aria-label="Example Verigrity Score result"><div class="demo-score-label">DEMO / EXAMPLE ONLY — NOT A LIVE RESULT</div>
   <div class="result-head"><div><div class="result-url">Example website</div><small>Example only — not a live scan</small></div><div class="result-score"><span class="score-label">Verigrity Score</span>82<small>/100</small></div></div>
   <p class="pass-text"><strong>Strong visible signals</strong></p>
@@ -237,7 +238,7 @@
   <div class="faq-list">
     <details><summary>Is Verigrity free?</summary><p>Yes. The core Verigrity verification tools are free to use without a subscription, account requirement, or paywall. Verigrity does not impose an artificial per-user scan quota; availability can still depend on the hosting provider and normal anti-abuse infrastructure.</p></details>
     <details><summary>Does a good score mean a website is safe?</summary><p>No. The report is not a security certification or guarantee. A legitimate-looking site can still be compromised, misleading, or unsuitable for a particular transaction.</p></details>
-    <details><summary>Does Verigrity store the websites I check?</summary><p>The current browser-based demo does not send your URL to a Verigrity server. Any future server-side features will have their own privacy disclosures before they are introduced.</p></details>
+    <details><summary>Does Verigrity store the websites I check?</summary><p><strong>No — this check runs entirely in your browser.</strong> The URL you enter is fetched client-side to review visible signals (HTTPS, privacy page, contact info, etc.). It is not sent to a Verigrity server for scoring, and we do not store a history of sites you check. The Verigrity Score is generated locally in about 5 seconds when the target website responds promptly. Any future server-side features will have separate privacy disclosures before they are introduced.</p></details>
     <details><summary>Can I use the report to investigate a business?</summary><p>You can use it as one research step. For important decisions, independently verify the business identity, registration, contact information, payment destination and relevant claims.</p></details>
   </div>
 </div>
