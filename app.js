@@ -177,6 +177,7 @@ form?.addEventListener("submit",async e=>{
     renderReport(await browserFallback(u));
   }
   button.disabled=false;button.textContent="Check another website";
+  document.getElementById("url").value="";
 });
  
 function buildScoreCardBlob(){
