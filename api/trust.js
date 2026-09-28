@@ -15,9 +15,10 @@ module.exports=async(req,res)=>{
   if(!u)return out(res,400,{error:"Invalid http/https URL"});
   try{
     await publicHost(u.hostname);
+    const dnsHost=u.hostname.replace(/^www\./i,"");
     let [p,d,t]=await Promise.all([
       fetchPage(u.toString()),
-      dnsInfo(u.hostname),
+      dnsInfo(dnsHost),
       u.protocol==="https:"?tlsInfo(u.hostname):Promise.resolve({error:"TLS details apply to HTTPS"})
     ]);
     let c=p.ok?content(p.body):{policy:{},title:"",words:0,links:0};
