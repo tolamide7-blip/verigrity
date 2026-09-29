@@ -1,1 +1,120 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cookie Notice | Verigrity</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="logo.svg"></head><body><main style="max-width:850px;margin:60px auto;padding:0 20px;font:16px/1.7 system-ui"><a href="index.html">← Verigrity</a><h1>Cookie Notice</h1><p>Verigrity may use cookies and similar technologies for essential functionality, analytics, advertising, security, and remembering preferences. The basic checker currently works without storing the URL you enter on a Verigrity server.</p><p>Where required by law, consent choices will be presented before non-essential cookies are used. You can also control cookies through your browser settings.<p>If Google AdSense is enabled, Google and its partners may use advertising cookies or similar identifiers as described in Google's publisher policies and applicable consent requirements. Where required, Verigrity will request consent before using non-essential advertising or analytics technologies.</p><p>See our <a href="privacy.html">Privacy Policy</a> and <a href="disclosure.html">Disclosure</a> for more information.</p></main><div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="cookies.html">Cookie details</a></div></div><script>function cookieChoice(v){try{localStorage.setItem('verigrity_cookie_choice',v)}catch(e){}document.getElementById('cookieBanner')?.classList.remove('show')}try{if(!localStorage.getItem('verigrity_cookie_choice'))document.getElementById('cookieBanner')?.classList.add('show')}catch(e){document.getElementById('cookieBanner')?.classList.add('show')}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cookie Notice | Verigrity</title>
+<meta name="description" content="How Verigrity uses cookies and similar technologies: essential cookies, Google Analytics, advertising cookies, and how to control your consent choices.">
+<link rel="canonical" href="https://verigrity.com/cookies.html">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="logo.svg" width="34" height="34" alt=""> Verigrity</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#checker-tool">Trust Checker</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="nav-cta" href="index.html#checker-tool">Check a Site</a>
+  </div>
+</header>
+
+<main style="max-width:850px;margin:60px auto;padding:0 20px;font:16px/1.7 system-ui">
+  <p class="eyebrow">POLICY</p>
+  <h1>Cookie Notice</h1>
+  <p><strong>Last updated: 29 September 2026</strong></p>
+
+  <p>This Cookie Notice explains how Verigrity uses cookies and similar technologies on <strong>verigrity.com</strong> (the "Site"). It should be read alongside our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h2>What cookies are</h2>
+  <p>Cookies are small text files that a website can store in your browser. They are widely used to remember preferences, measure how a site is used, and support advertising. Similar technologies — such as local storage and pixel tags — serve related purposes and are covered by this notice as well.</p>
+
+  <h2>Categories of cookies we use</h2>
+
+  <h3>1. Essential cookies</h3>
+  <p>These are required for the Site to function. They do not require consent.</p>
+  <ul>
+    <li><strong>Cookie consent choice</strong> — stored in your browser's local storage under the key <code>verigrity_cookie_choice</code>, so the banner does not reappear on every visit.</li>
+    <li><strong>Security and anti-abuse</strong> — features that may be set by our hosting provider to protect the Site from malicious traffic.</li>
+  </ul>
+
+  <h3>2. Analytics cookies (consent required)</h3>
+  <p>These help us understand how visitors use the Site. We use <strong>Google Analytics 4</strong>, which sets cookies and reads identifiers to measure page views, session duration, and similar metrics. Google Analytics cookies are loaded only after you click <strong>Accept</strong> on the cookie banner.</p>
+  <p>Google's privacy practices are described at <a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">policies.google.com/privacy</a>.</p>
+
+  <h3>3. Advertising cookies (consent required)</h3>
+  <p>If Google AdSense or other advertising services are enabled on the Site, those services may set cookies to serve ads, limit ad frequency, and measure advertising performance. Advertising cookies are loaded only after you click <strong>Accept</strong>.</p>
+  <p>If we enable advertising in the future, this page and our <a href="privacy.html">Privacy Policy</a> will be updated before the change goes live.</p>
+
+  <h2>How consent works on Verigrity</h2>
+  <p>When you first visit the Site, a banner appears at the bottom of the page with two options:</p>
+  <ul>
+    <li><strong>Accept</strong> — loads analytics and (if enabled) advertising cookies.</li>
+    <li><strong>Reject non-essential</strong> — keeps the Site fully functional using essential cookies only.</li>
+  </ul>
+  <p>Your choice is stored in your browser's local storage. It is not sent to our servers. You can change your choice at any time by clearing your browser's local storage for verigrity.com; the banner will reappear on your next visit.</p>
+
+  <h2>Cookies and the URL you check</h2>
+  <p>When you submit a URL to the Verigrity Trust Checker or any Verigrity tool, the URL is sent to our server endpoint (<code>/api/trust</code>) so the tool can fetch the site's public signals. This URL is processed in memory and is not stored, logged, or associated with your browser session. The check does not set any cookies for the site you are inspecting.</p>
+
+  <h2>Do Not Track and similar signals</h2>
+  <p>Some browsers send a "Do Not Track" or "Global Privacy Control" signal. Verigrity honors the consent banner as the primary mechanism for controlling non-essential cookies. If your browser sends a Do Not Track signal, we do not use it to load non-essential cookies; the banner remains the controlling preference.</p>
+
+  <h2>How to control cookies yourself</h2>
+  <p>You can control or delete cookies through your browser settings. The exact steps depend on your browser:</p>
+  <ul>
+    <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data.</li>
+    <li><strong>Firefox:</strong> Settings → Privacy &amp; Security → Cookies and Site Data.</li>
+    <li><strong>Safari:</strong> Settings → Privacy → Manage Website Data.</li>
+    <li><strong>Edge:</strong> Settings → Cookies and site permissions → Cookies and site data.</li>
+  </ul>
+  <p>Blocking essential cookies may prevent parts of the Site from working. Blocking analytics or advertising cookies does not affect the Site's functionality.</p>
+
+  <h2>Opting out of personalized advertising</h2>
+  <p>If advertising is enabled and you wish to opt out of personalized advertising, you can visit <a href="https://www.google.com/settings/ads" rel="nofollow noopener" target="_blank">Google Ads Settings</a> and <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">www.aboutads.info</a>.</p>
+
+  <h2>Changes to this notice</h2>
+  <p>We may update this Cookie Notice when we change the cookies or technologies we use. When we do, we will update the "Last updated" date at the top of this page.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about cookies can be sent through our <a href="contact.html">contact form</a>.</p>
+
+  <p><a href="index.html">← Return to Verigrity</a></p>
+</main>
+
+<footer>
+<div class="container footer-bottom">
+<a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="methodology.html">Methodology</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="disclosure.html">Disclosure</a>
+<a href="cookies.html">Cookies</a>
+</div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices">
+  <strong>Privacy choices</strong>
+  <p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies are used only according to applicable consent requirements.</p>
+  <div class="cookie-actions">
+    <button class="button" type="button" onclick="cookieChoice('accept')">Accept</button>
+    <button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button>
+    <a class="button secondary" href="cookies.html">Cookie details</a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
