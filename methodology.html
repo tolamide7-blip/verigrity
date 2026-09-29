@@ -1,1 +1,132 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Verigrity Methodology — How the Trust Score Works</title><meta name="description" content="Learn how Verigrity's free website trust report works and what its signals can and cannot prove."><link rel="icon" href="logo.svg"><link rel="stylesheet" href="styles.css"></head><body><main class="section"><article class="container article"><p class="eyebrow">METHODOLOGY</p><h1>How the Verigrity Trust Score works</h1><p class="article-lead">Verigrity combines observable technical and transparency signals into a research aid, not a certification.</p><h2>Signals</h2><p>The service can examine HTTPS, HTTP status, redirects, TLS certificate information, DNS records, common security headers, page metadata and visible signals for privacy, terms, refund, contact and about information.</p><h2>Limitations</h2><ul class="report-list"><li>Websites can block automated requests.</li><li>Content can change after a report is generated.</li><li>DNS and certificate data do not establish business ownership.</li><li>Technical configuration cannot establish the truth of every business claim.</li></ul><h2>Human verification</h2><p>For important decisions, verify the organization independently, confirm payment details, review policies and investigate material claims through sources outside the website itself.</p><p><a class="button" href="index.html#checker">Run the free checker</a></p></article></main><div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="cookies.html">Cookie details</a></div></div><script>function cookieChoice(v){try{localStorage.setItem('verigrity_cookie_choice',v)}catch(e){}document.getElementById('cookieBanner')?.classList.remove('show')}try{if(!localStorage.getItem('verigrity_cookie_choice'))document.getElementById('cookieBanner')?.classList.add('show')}catch(e){document.getElementById('cookieBanner')?.classList.add('show')}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verigrity Methodology — How the Trust Score Works</title>
+<meta name="description" content="Learn how Verigrity's free website trust report works: what signals it examines, how the score is calculated, and what it can and cannot prove.">
+<link rel="canonical" href="https://verigrity.com/methodology.html">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="logo.svg" width="34" height="34" alt=""> Verigrity</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#checker-tool">Trust Checker</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="nav-cta" href="index.html#checker-tool">Check a Site</a>
+  </div>
+</header>
+
+<main class="section">
+<article class="container article">
+  <p class="eyebrow">METHODOLOGY</p>
+  <h1>How the Verigrity Trust Score works</h1>
+  <p class="article-lead">Verigrity combines observable technical and transparency signals into a research aid, not a certification.</p>
+
+  <h2>What the score is</h2>
+  <p>The Verigrity Trust Score is a 0–100 summary of signals that can be observed from outside a website. It is designed to help someone slow down and look at what a site actually shows before deciding whether to buy, register, or share information with it.</p>
+  <p>The score is not a certification, and it is not a guarantee. It exists to summarize visible signals, not to make a verdict on behalf of the user.</p>
+
+  <h2>Signals examined</h2>
+  <p>When you submit a URL, Verigrity examines the following categories of observable signals:</p>
+  <ul>
+    <li><strong>HTTPS protocol.</strong> Whether the site is served over an encrypted connection.</li>
+    <li><strong>HTTP status.</strong> Whether the server responds with a normal success or redirect code, or returns an error.</li>
+    <li><strong>Redirects.</strong> How many hops a request takes before reaching its final destination.</li>
+    <li><strong>TLS certificate.</strong> The subject, issuer, and validity window of the certificate presented by the server.</li>
+    <li><strong>DNS records.</strong> A, AAAA, MX and NS records that describe how the domain is set up.</li>
+    <li><strong>Security headers.</strong> Common HTTP response headers that instruct the browser how to protect the visitor.</li>
+    <li><strong>Page metadata.</strong> The page title and basic content signals.</li>
+    <li><strong>Transparency signals.</strong> Whether the page links to a privacy policy, terms of service, refund information, contact details, or an about page.</li>
+  </ul>
+
+  <h2>How the score is calculated</h2>
+  <p>Each scan starts from a base value and adjusts based on the observed signals. In broad terms:</p>
+  <ul>
+    <li>Encrypted connections (HTTPS) contribute the largest single boost.</li>
+    <li>A normal HTTP response contributes a smaller boost.</li>
+    <li>Short redirect chains contribute a small boost; long ones subtract.</li>
+    <li>Each of six common security headers contributes a fixed number of points, up to a cap.</li>
+    <li>Presence of a privacy policy, terms, or contact signal contributes small amounts.</li>
+    <li>A missing page title subtracts a small amount.</li>
+    <li>A punycode hostname (<code>xn--</code>) subtracts a fixed amount, because punycode can be used to visually imitate other domains.</li>
+  </ul>
+  <p>The final score is clamped between 0 and 100. The exact weights may be adjusted over time, but the categories are stable: technical signals and transparency signals each contribute to the total.</p>
+
+  <h2>What the score is not</h2>
+  <ul class="report-list">
+    <li>A security audit. Verigrity does not run malware scans, penetration tests, or vulnerability lookups.</li>
+    <li>A business verification. The score does not confirm that the organization behind a site is registered, licensed, or real.</li>
+    <li>Fraud determination. A high score does not mean a site is honest; a low score does not mean it is a scam.</li>
+    <li>A legal opinion. The score is not a compliance statement, a GDPR assessment, or a consumer-protection determination.</li>
+    <li>A substitute for independent research. Websites can be compromised, misrepresent themselves, or change behavior after a scan is produced.</li>
+  </ul>
+
+  <h2>Limitations of automated analysis</h2>
+  <ul class="report-list">
+    <li>Websites can block automated requests, in which case some signals cannot be observed.</li>
+    <li>Content can change after a report is generated.</li>
+    <li>DNS and certificate data do not establish business ownership.</li>
+    <li>Technical configuration cannot establish the truth of every business claim.</li>
+    <li>Metadata can be removed, altered, or spoofed.</li>
+  </ul>
+
+  <h2>Human verification</h2>
+  <p>For important decisions, the score should be one input among many. A responsible use of the tool looks like this:</p>
+  <ul>
+    <li>Run the scan and note which signals are present and which are missing.</li>
+    <li>Read the site itself — does the content look substantive, is the design coherent, are policies readable?</li>
+    <li>Search independently. Look for the business name on external sources, check reviews, verify registrations in the relevant jurisdiction.</li>
+    <li>Verify payment details separately. Never wire money or enter card details based on an automated scan alone.</li>
+    <li>Confirm identities through channels you can independently verify — official websites, phone numbers, or registry records.</li>
+  </ul>
+
+  <h2>Why we publish the methodology</h2>
+  <p>A tool that claims to help people verify information should be transparent about how it works and what it cannot do. Publishing this methodology is part of treating Verigrity's users as capable researchers rather than people to be given a false sense of certainty.</p>
+  <p>If a score is ever changed or reweighted, this page will be updated to reflect the change.</p>
+
+  <h2>Corrections</h2>
+  <p>If you spot an error in this methodology, want to report a bug in the checker, or believe a score for your site is misleading, please use the <a href="contact.html">contact form</a> and describe the issue. Include the URL and any steps needed to reproduce the problem.</p>
+
+  <p><a class="button" href="index.html#checker-tool">Run the free checker</a></p>
+</article>
+</main>
+
+<footer>
+<div class="container footer-bottom">
+<a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="methodology.html">Methodology</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="disclosure.html">Disclosure</a>
+<a href="cookies.html">Cookies</a>
+</div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices">
+  <strong>Privacy choices</strong>
+  <p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies are used only according to applicable consent requirements.</p>
+  <div class="cookie-actions">
+    <button class="button" type="button" onclick="cookieChoice('accept')">Accept</button>
+    <button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button>
+    <a class="button secondary" href="cookies.html">Cookie details</a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
