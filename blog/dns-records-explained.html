@@ -1,11 +1,143 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DNS Records Explained: A Beginner&#x27;s Guide | Verigrity</title><meta name="description" content="This practical Verigrity guide explains DNS records in plain language, shows what to inspect, and explains the limits of automated checks."><link rel="canonical" href="https://verigrity.com/blog/dns-records-explained.html"><meta property="og:type" content="article"><meta property="og:title" content="DNS Records Explained: A Beginner&#x27;s Guide"><meta property="og:description" content="This practical Verigrity guide explains DNS records in plain language, shows what to inspect, and explains the limits of automated checks."><meta property="og:url" content="https://verigrity.com/blog/dns-records-explained.html"><link rel="icon" href="../logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DNS Records Explained: A Beginner's Guide", "description": "This practical Verigrity guide explains DNS records in plain language, shows what to inspect, and explains the limits of automated checks.", "author": {"@type": "Organization", "name": "Verigrity"}, "publisher": {"@type": "Organization", "name": "Verigrity", "logo": {"@type": "ImageObject", "url": "https://verigrity.com/logo.svg"}}, "mainEntityOfPage": "https://verigrity.com/blog/dns-records-explained.html"}</script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav"><a class="logo" href="../index.html"><img src="../logo.svg" alt="" width="34" height="34"> Verigrity</a><nav aria-label="Primary navigation">
-<a href="../index.html#checker">Trust Checker</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DNS Records Explained: A, AAAA, MX, NS and More | Verigrity</title><meta name="description" content="A plain-language guide to the DNS record types that matter most: what A, AAAA, MX, NS, TXT and CNAME records do, how to read them, and what they can tell you about a domain."><link rel="canonical" href="https://verigrity.com/blog/dns-records-explained.html"><meta name="robots" content="index,follow"><meta property="og:type" content="article"><meta property="og:title" content="DNS Records Explained: A, AAAA, MX, NS and More"><meta property="og:description" content="A plain-language guide to the DNS record types that matter most when checking a domain."><meta property="og:url" content="https://verigrity.com/blog/dns-records-explained.html"><link rel="icon" href="../logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DNS Records Explained: A, AAAA, MX, NS and More", "description": "A plain-language guide to the DNS record types that matter most when checking a domain.", "author": {"@type": "Organization", "name": "Verigrity"}, "publisher": {"@type": "Organization", "name": "Verigrity", "logo": {"@type": "ImageObject", "url": "https://verigrity.com/logo.svg"}}, "mainEntityOfPage": "https://verigrity.com/blog/dns-records-explained.html"}</script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav"><a class="logo" href="../index.html"><img src="../logo.svg" alt="" width="34" height="34"> Verigrity</a><nav aria-label="Primary navigation">
+<a href="../index.html#checker-tool">Trust Checker</a>
 <a href="../tools.html">Tools</a>
 <a href="../blog.html">Blog</a>
 <a href="../methodology.html">Methodology</a>
 <a href="../about.html">About</a>
 <a href="../contact.html">Contact</a>
-</nav><a class="nav-cta" href="../index.html#checker">Check a Site</a></div></header><main id="main" class="section"><article class="container article"><p class="eyebrow">VERIGRITY GUIDE</p><h1>DNS Records Explained: A Beginner&#x27;s Guide</h1><p class="article-author">By <strong>T.O.</strong> — Independent Remote Researcher</p><p class="article-lead">This practical Verigrity guide explains DNS records in plain language, shows what to inspect, and explains the limits of automated checks.</p><figure class="article-hero-image"><img src="../assets/verigrity-website-safety-guide.png" alt="Verigrity illustration about DNS Records Explained: A Beginner&amp;#x27;s Guide" loading="lazy" width="1536" height="1024"><figcaption>Original Verigrity illustration. It is explanatory artwork, not evidence for the claims discussed in this article.</figcaption></figure><div class="article-meta">Evergreen guide · Free to read · Editorially maintained</div><h2>DNS is infrastructure</h2><p>DNS maps names to network information used by browsers and other services.</p><h2>A, AAAA, MX and NS</h2><p>A and AAAA records commonly identify IPv4 and IPv6 addresses; MX identifies mail destinations; NS identifies authoritative nameservers.</p><h2>Do not over-interpret DNS</h2><p>DNS is technical context, not a reputation or legitimacy score.</p><h2>Look for transparency</h2><p>Useful websites normally make important information discoverable. Look for appropriate contact details, privacy information, terms, pricing and refund conditions.</p><h2>Know the limitation</h2><p>Websites change, scanners can be blocked, and a technical signal cannot establish every fact about a business.</p><h2>Practical checklist</h2><p>Before an important action, verify the exact domain, inspect relevant technical signals, review policies, confirm payment details and use independent sources.</p><h2>Practical checklist</h2><ul class="report-list"><li>Identify the exact domain or signal being checked.</li><li>Compare important claims with an independent source.</li><li>Do not enter sensitive information merely because a technical signal looks positive.</li><li>Confirm prices, policies, recipients and transaction details before paying.</li><li>Use automated reports as research aids rather than final verdicts.</li></ul><h2>Frequently asked questions</h2><h3>Can this check guarantee a website is safe?</h3><p>No. It provides evidence and questions for further research, not a guarantee.</p><h3>Why might a check fail?</h3><p>A site can block automated requests, require browser JavaScript, change its content or expose different information to different visitors.</p><h3>What should I do if several signals look unusual?</h3><p>Pause and verify the organization through a known independent route before sharing credentials or paying.</p><div class="disclosure-box"><strong>Editorial disclosure:</strong> Verigrity may use advertising or affiliate links to fund free tools. This article is educational information, not a security certification or guarantee.</div><p><a class="button" href="../index.html#checker">Run a free website trust check</a></p><p><a class="text-link" href="../blog.html">← Browse all Verigrity guides</a></p><div class="article-disclosure"><strong>Editorial disclosure:</strong> This article is for general informational and research purposes. Verigrity tools provide observable signals and limitations; they do not guarantee truth, authenticity, safety, legality, or authorship.</div></article></main><footer>
+</nav><a class="nav-cta" href="../index.html#checker-tool">Check a Site</a></div></header><main id="main" class="section"><article class="container article"><p class="eyebrow">VERIGRITY GUIDE</p><h1>DNS Records Explained: A, AAAA, MX, NS and More</h1><p class="article-author">By <strong>T.O.</strong> — Independent Remote Researcher</p><p class="article-lead">Every domain name has a set of DNS records that tell the internet how to route traffic, deliver mail, and verify ownership. They're invisible in normal use, but they show up in almost every trust-checking tool. Here's what the main record types do, in plain language, and what they can — and can't — tell you about a domain.</p>
+
+<div class="article-meta">Reading time: about 7 minutes · Free to read · Editorially maintained</div>
+
+<h2>What DNS is, in one paragraph</h2>
+<p>The Domain Name System (DNS) is the internet's phone book. When you type <code>example.com</code> into a browser, the browser sends a DNS query to a resolver, which eventually reaches the domain's authoritative nameservers. Those nameservers return a set of records that describe where to route traffic, where to deliver mail, and other metadata. All of this happens in milliseconds, usually before the page starts loading.</p>
+<p>DNS records are public. Anyone can query them for any domain. That's why they show up in trust-checking tools — they're a source of information the site itself doesn't control at the moment of the query.</p>
+
+<h2>A records — IPv4 addresses</h2>
+<p><strong>Format:</strong> <code>example.com. 3600 IN A 93.184.216.34</code></p>
+<p>An A record maps a domain name to an IPv4 address. When your browser looks up <code>example.com</code>, the A record is what returns the numeric address your computer actually connects to.</p>
+<p>What A records can tell you:</p>
+<ul>
+  <li><strong>Where the site is hosted.</strong> The IP address often maps to a known hosting provider (Cloudflare, AWS, Google Cloud, DigitalOcean, etc.). You can look up the IP's owner with a WHOIS IP lookup.</li>
+  <li><strong>How many servers serve the site.</strong> Multiple A records indicate load balancing. A single A record suggests a small or simple setup.</li>
+  <li><strong>Residential vs. commercial hosting.</strong> An IP in a residential block serving a "business" site is unusual. Legitimate commercial sites almost always use data-center hosting.</li>
+</ul>
+
+<h2>AAAA records — IPv6 addresses</h2>
+<p><strong>Format:</strong> <code>example.com. 3600 IN AAAA 2606:2800:220:1:248:1893:25c8:1946</code></p>
+<p>AAAA records (pronounced "quad-A") do the same thing as A records, but for IPv6 addresses. IPv6 is the newer version of the internet protocol, designed to replace IPv4 because IPv4 addresses are running out.</p>
+<p>What AAAA records can tell you:</p>
+<ul>
+  <li><strong>How modern the infrastructure is.</strong> A site with both A and AAAA records supports both protocols — generally a sign of current setup.</li>
+  <li><strong>IPv6-only hosting.</strong> Rare today, but a site with only AAAA records (no A) is either IPv6-forward or misconfigured.</li>
+</ul>
+<p>Many sites still have no AAAA records at all. That's not a red flag — it just means they only serve IPv4.</p>
+
+<h2>MX records — mail servers</h2>
+<p><strong>Format:</strong> <code>example.com. 3600 IN MX 10 mail.example.com.</code></p>
+<p>MX records specify which servers receive email for the domain. The number before the hostname is the priority — lower numbers are tried first.</p>
+<p>What MX records can tell you:</p>
+<ul>
+  <li><strong>Whether the domain can receive email.</strong> No MX records means no email. A domain claiming to be a real business but with no MX records is worth noting.</li>
+  <li><strong>Which mail provider is used.</strong> MX records often reveal Google Workspace (<code>aspmx.l.google.com</code>), Microsoft 365 (<code>*.mail.protection.outlook.com</code>), ProtonMail, Zoho, or a self-hosted solution.</li>
+  <li><strong>Consistency with the brand.</strong> A site claiming to be a large company but using a cheap shared host's mail servers is a signal worth investigating.</li>
+</ul>
+<p>Note: the absence of MX records is not automatically suspicious. Some domains don't need email at all (static sites, for example). But for a site that says it's a business, no MX records is unusual.</p>
+
+<h2>NS records — nameservers</h2>
+<p><strong>Format:</strong> <code>example.com. 172800 IN NS ns1.example.com.</code></p>
+<p>NS records identify the authoritative nameservers for the domain — the servers that other DNS servers ask when they need to resolve a hostname. Every domain has at least two NS records for redundancy.</p>
+<p>What NS records can tell you:</p>
+<ul>
+  <li><strong>Where the domain's DNS is managed.</strong> Common providers include Cloudflare, Route 53 (AWS), Google Cloud DNS, and registrar-managed nameservers.</li>
+  <li><strong>Whether the domain uses a CDN.</strong> Cloudflare nameservers, for example, usually indicate the site is behind Cloudflare's CDN and firewall.</li>
+  <li><strong>How sophisticated the setup is.</strong> Enterprise-grade DNS (Route 53, Google Cloud DNS) is more common on established business sites than on personal projects.</li>
+</ul>
+
+<h2>TXT records — arbitrary text</h2>
+<p><strong>Format:</strong> <code>example.com. 3600 IN TXT "v=spf1 include:_spf.google.com ~all"</code></p>
+<p>TXT records hold arbitrary text. They were originally designed for human-readable notes, but they're now used for a wide range of machine-readable metadata. The most common uses are:</p>
+<ul>
+  <li><strong>SPF</strong> — specifies which servers are authorized to send email for the domain. Helps prevent spoofing.</li>
+  <li><strong>DKIM</strong> — publishes a public key used to verify the signature on outgoing emails.</li>
+  <li><strong>DMARC</strong> — specifies how receivers should handle emails that fail SPF or DKIM checks.</li>
+  <li><strong>Domain verification</strong> — Google, Microsoft, and other services use TXT records to prove you control a domain.</li>
+</ul>
+<p>What TXT records can tell you:</p>
+<ul>
+  <li><strong>How well email is configured.</strong> SPF, DKIM, and DMARC records indicate a domain takes email authentication seriously. Missing records don't prove anything malicious, but they mean the domain is easier to spoof.</li>
+  <li><strong>What services the domain uses.</strong> Verification records often reveal Google Search Console, Microsoft 365, Atlassian, or similar.</li>
+</ul>
+
+<h2>CNAME records — aliases</h2>
+<p><strong>Format:</strong> <code>www.example.com. 3600 IN CNAME example.com.</code></p>
+<p>A CNAME record points one hostname to another. Instead of resolving <code>www.example.com</code> directly, DNS resolves <code>example.com</code> and returns the same answer. CNAMEs are used for aliasing — you'll often see <code>www</code> aliased to the root domain, or a subdomain aliased to a CDN.</p>
+<p>What CNAME records can tell you:</p>
+<ul>
+  <li><strong>Whether a subdomain is on a third-party platform.</strong> A CNAME pointing to a Shopify, GitHub Pages, or Heroku hostname, for example.</li>
+  <li><strong>Subdomain structure.</strong> Which subdomains exist and how they're wired up.</li>
+</ul>
+
+<h2>Other record types you may encounter</h2>
+<ul>
+  <li><strong>SOA</strong> — the "start of authority" record, present on every domain. Contains metadata about the zone.</li>
+  <li><strong>CAA</strong> — specifies which Certificate Authorities may issue certificates for the domain. A security-hardening feature.</li>
+  <li><strong>SRV</strong> — service location records, used by services like SIP and Microsoft Teams.</li>
+  <li><strong>PTR</strong> — reverse DNS, used mostly for email reputation checks.</li>
+</ul>
+
+<h2>What DNS records can and cannot tell you</h2>
+<p>DNS is a technical layer. It shows how a domain is configured right now, but it doesn't directly tell you anything about the operator's intent.</p>
+<p><strong>What DNS can show:</strong></p>
+<ul>
+  <li>Where the site is hosted</li>
+  <li>Whether it can receive email</li>
+  <li>Which mail and DNS providers it uses</li>
+  <li>Whether it uses a CDN</li>
+  <li>Whether it's set up with modern infrastructure</li>
+  <li>Whether email authentication (SPF, DKIM, DMARC) is in place</li>
+</ul>
+<p><strong>What DNS cannot show:</strong></p>
+<ul>
+  <li>Whether the business is legitimate</li>
+  <li>Whether the site is malicious</li>
+  <li>Who registered the domain (that's WHOIS, a separate system)</li>
+  <li>How old the domain is (also WHOIS)</li>
+  <li>Whether the site will be online tomorrow</li>
+</ul>
+<p>DNS is one signal among many. It's useful for context, especially when combined with WHOIS, TLS certificate details, and the site's own content. On its own, it's rarely decisive.</p>
+
+<h2>How to look up DNS records</h2>
+<p>Two common ways:</p>
+<ul>
+  <li><strong>Command line:</strong> on any Mac or Linux system, run <code>dig example.com ANY</code> or <code>nslookup -type=MX example.com</code>. On Windows, use <code>nslookup</code> with the <code>-type</code> flag.</li>
+  <li><strong>Browser tools:</strong> the Verigrity DNS Checker displays A, AAAA, MX and NS records for any domain in a single view.</li>
+</ul>
+<p>For most trust-checking purposes, the browser approach is faster.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Why does a domain have no MX records?</h3>
+<p>Two reasons: either it doesn't receive email (common for static sites or developer projects), or it's misconfigured. For a site presenting itself as a business, no MX records is unusual and worth investigating.</p>
+
+<h3>What does an <code>xn--</code> prefix mean in DNS?</h3>
+<p>It indicates Punycode — a domain containing non-ASCII characters (Cyrillic, Arabic, Chinese, etc.). Some are legitimate; some are used in homograph attacks that visually mimic well-known brands.</p>
+
+<h3>Can DNS records change frequently?</h3>
+<p>Yes. DNS is a live system. Records change when hosting changes, mail providers migrate, or certificates are reissued. Frequent changes are not inherently suspicious, but they can indicate churn behind a domain.</p>
+
+<h3>Are multiple A records suspicious?</h3>
+<p>No. Multiple A records usually mean the site is load-balanced or distributed across multiple servers — this is normal, and often a sign of a well-run infrastructure.</p>
+
+<h3>What's the difference between DNS and WHOIS?</h3>
+<p>DNS describes how a domain routes traffic right now. WHOIS describes who registered the domain and when. They're complementary — useful together, not separately.</p>
+
+<div class="disclosure-box"><strong>Editorial disclosure:</strong> Verigrity may use advertising or affiliate links to fund free tools. This article is educational information, not a security certification or guarantee.</div>
+
+<p><a class="button" href="../tools/dns-checker.html">Run the DNS Checker</a></p>
+<p><a class="text-link" href="../blog.html">← Browse all Verigrity guides</a></p>
+
+<div class="article-disclosure"><strong>Editorial disclosure:</strong> This article is for general informational and research purposes. Verigrity tools provide observable signals and limitations; they do not guarantee truth, authenticity, safety, legality, or authorship.</div></article></main><footer>
 <div class="container footer-bottom">
 <a href="../index.html">Home</a>
 <a href="../tools.html">Tools</a>
@@ -18,4 +150,4 @@
 <a href="../disclosure.html">Disclosure</a>
 <a href="../cookies.html">Cookies</a>
 </div>
-</footer><div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="../cookies.html">Cookie details</a></div></div><script>function cookieChoice(v){try{localStorage.setItem('verigrity_cookie_choice',v)}catch(e){}document.getElementById('cookieBanner')?.classList.remove('show')}try{if(!localStorage.getItem('verigrity_cookie_choice'))document.getElementById('cookieBanner')?.classList.add('show')}catch(e){document.getElementById('cookieBanner')?.classList.add('show')}</script></body></html>
+</footer><div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie choices"><strong>Privacy choices</strong><p>Verigrity may use essential technologies and, if enabled, analytics or advertising technologies. Non-essential technologies should be used only according to applicable consent requirements.</p><div class="cookie-actions"><button class="button" type="button" onclick="cookieChoice('accept')">Accept</button><button class="button secondary" type="button" onclick="cookieChoice('reject')">Reject non-essential</button><a class="button secondary" href="../cookies.html">Cookie details</a></div></div><script src="../app.js"></script></body></html>
